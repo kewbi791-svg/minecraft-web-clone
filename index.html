@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Web Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="crosshair">+</div>
+    <div id="info">WASD mover | Mouse olhar | Shift+B Telão | Esc soltar mouse</div>
+    <div id="tiktok-status">TikTok: desconectado</div>
+  </div>
+
+  <!-- Overlay do Telão -->
+  <div id="telao" class="hidden">
+    <div class="telao-header">
+      <h2>TELÃO</h2>
+      <button id="close-telao">Fechar (Shift+B)</button>
+    </div>
+    <div class="telao-controls">
+      <input type="text" id="url-input" placeholder="Cole uma URL aqui..." />
+      <button id="load-url">Carregar URL</button>
+      <button id="open-search">Pesquisar</button>
+    </div>
+    <div id="telao-content">
+      <iframe id="telao-iframe" src="about:blank" allowfullscreen></iframe>
+    </div>
+    <div id="search-panel" class="hidden">
+      <input type="text" id="search-input" placeholder="Pesquisar Wikipedia, séries, esportes..." />
+      <div class="search-buttons">
+        <button data-api="wikipedia">Wikipedia</button>
+        <button data-api="duckduckgo">DuckDuckGo</button>
+        <button data-api="tvmaze">TVMaze</button>
+        <button data-api="sports">TheSportsDB</button>
+      </div>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- Menu de configurações -->
+  <div id="settings" class="hidden">
+    <h2>Configurações</h2>
+    <label>
+      TikTok Username (live):
+      <input type="text" id="tiktok-username" placeholder="seu_usuario" />
+    </label>
+    <button id="connect-tiktok">Conectar Live</button>
+    <p class="warning">Usa API não-oficial. Você precisa de uma key de serviço como tik.tools</p>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
