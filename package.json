@@ -1,0 +1,13 @@
+{
+  "name": "minecraft-web-clone",
+  "version": "0.1.0",
+  "description": "Réplica experimental do Minecraft no navegador com telão, WebSocket e TikTok Live",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": ["minecraft", "voxel", "three.js", "webgl", "tiktok"],
+  "author": "Ainoã + Grok",
+  "license": "MIT"
+}
